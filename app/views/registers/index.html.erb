@@ -1,0 +1,6 @@
+<h1 class="red row center-xs top-space">LISTA DE USUARIOS REGISTRADOS</h1>
+<% @registers.each do |register| %>	
+	<div class="fontsize row center-xs " >
+	<%= register.nombre %>	- <%=link_to "Ver info",register%> 	
+	</div>
+<%end%>

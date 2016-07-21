@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>App</title>
+ <link href='https://fonts.googleapis.com/css?family=Architects+Daughter' rel='stylesheet' type='text/css'>
+  <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
+  <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
+  <%= csrf_meta_tags %>
+</head>
+<body>
+	<header>
+		<nav class="be-red white large-padding">		
+			<ul class=" no-list row  center-xs middle-xs ">
+
+				<li class="col-md">
+					<h1 class="no-margin white toro"><%= link_to "TORO-LABS",'/'%></h1>					
+				</li>
+
+				<li class="col-md iconos">
+					<%= link_to 'VER USUARIOS', '/registers' %>		
+				</li>
+
+				<li class="col-md iconos ">
+					<%=link_to "INGRESAR", '/registers/new'%>
+
+
+				</li>
+
+				<li class="col-md iconos">
+					<%= link_to('ADMINISTRAR','/admin/dashboard#index') %>
+
+									
+				</li>
+				
+			</ul>
+		</nav>
+	</header>
+
+<%=yield%>
+
+</body>
+</html>
